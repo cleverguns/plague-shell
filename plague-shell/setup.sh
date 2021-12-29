@@ -4,25 +4,28 @@ function aliasfunc(){
   echo "source $HOME/.config/synth-shell/alias.sh" >> $HOME/.bashrc
   echo "source /home/$SUDO_USER/.config/synth-shell/alias.sh" >> /home/$SUDO_USER/.bashrc
   echo -e "${White}[${BGreen}+${White}]alias.sh added!"
+  echo -e "\n"
 }
 
 function bettercd(){
 echo "source $HOME/.config/synth-shell/better-cd.sh" >> $HOME/.bashrc
 echo "source /home/$SUDO_USER/.config/synth-shell/better-cd.sh" >> /home/$SUDO_USER/.bashrc
 echo -e "${White}[${BGreen}+${White}]better-cd.sh added!"
+echo -e "\n"
 }
 
 function betterhistory(){
 echo "source $HOME/.config/synth-shell/better-history.sh" >> $HOME/.bashrc
 echo "source /home/$SUDO_USER/.config/synth-shell/better-history.sh" >> /home/$SUDO_USER/.bashrc
-
 echo -e "${White}[${BGreen}+${White}]better-history.sh added!"
+echo -e "\n"
 }
 
 function betterls(){
 echo "source $HOME/.config/synth-shell/better-ls.sh" >> $HOME/.bashrc
 echo "source /home/$SUDO_USER/.config/synth-shell/better-ls.sh" >> /home/$SUDO_USER/.bashrc
 echo -e "${White}[${BGreen}+${White}]better-ls.sh added!"
+echo -e "\n"
 }
 
 function setup(){
@@ -42,10 +45,11 @@ echo "source /home/$SUDO_USER/plague-shell/plague-shell/banner.sh" >> /home/$SUD
 echo 'alias banner="prompt"' >> $HOME/.bashrc
 
   echo -e "${White}[${BGreen}+${White}] Sourcing main files success!"
-  echo -e -n "${White}[${BYellow}*${White}]Do you want to install alias.sh from synth-shell?(y=1/n=0): "
+  echo -e -n "\n${White}[${BYellow}*${White}]Do you want to install alias.sh from synth-shell?(y=1/n=0): "
 read choice1
 if [[ $choice1 == 0 ]];then
 echo -e "${White}[${BRed}-${White}]Skipping alias.sh"
+echo -e "\n"
 elif [[ $choice1 == 1 ]];then
  aliasfunc
 else 
@@ -57,6 +61,7 @@ read choice2
 if [[ $choice2 == 0 ]];
 then
 echo -e "${White}[${BRed}-${White}]Skipping better-cd.sh"
+echo -e "\n"
 elif [[ $choice2 == 1 ]];
 then
   bettercd
@@ -68,6 +73,7 @@ read choice3
 if [[ $choice3 == 0 ]];
 then
 echo -e "${White}[${BRed}-${White}]Skipping better-history.sh"
+echo -e "\n"
 elif [[ $choice3 == 1 ]];
 then
   betterhistory
@@ -80,6 +86,7 @@ read choice4
 if [[ $choice4 == 0 ]];
 then
 echo -e "${White}[${BRed}-${White}]Skipping better-ls.sh"
+echo -e "\n"
 elif [[ $choice4 == 1 ]];
 then
   bettercd
@@ -93,4 +100,5 @@ else
 fi
 }
 figlet Setup.sh
+echo -e "${BWhite}Only run this script once."
 setup
