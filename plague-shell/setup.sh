@@ -1,5 +1,5 @@
 #!/bin/bash
-source /home/$SUDO_USER/plague-shell/plague-shell/colors.sh
+source /home/$SUDO_USER/plague-shell/plague-shell/plague-shell/colors.sh
 function aliasfunc(){
   echo "source $HOME/.config/synth-shell/alias.sh" >> $HOME/.bashrc
   echo "source /home/$SUDO_USER/.config/synth-shell/alias.sh" >> /home/$SUDO_USER/.bashrc
