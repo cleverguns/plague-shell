@@ -30,13 +30,13 @@ echo -e "\n"
 }
 
 function setup(){
-  echo -e "${White}[${BYellow}*"${White}]Checking if user is running as root...
+  echo -e "${BWhite}[${BYellow}*${BWhite}]Checking if user is running as ${BRed}root."
   sleep 1
 if [ $EUID -eq 0 ];
 then
-  echo -e "${White}[${BGreen}+${White}]User is running as root."
+  echo -e "${BWhite}[${BGreen}+${BWhite}]User is running as ${BRed}root."
   sleep 1
-  echo -e "${White}[${BGreen}+${White}]Setting up .bashrc file..."
+  echo -e "${White}[${BGreen}+${BWhite}]Setting up .bashrc file..."
 echo "source /home/$SUDO_USER/plague-shell/plague-shell/files/plague-prompt.sh" >> $HOME/.bashrc
 echo "source /home/$SUDO_USER/plague-shell/plague-shell/files/banner.sh" >> $HOME/.bashrc
 echo 'alias banner="prompt"' >> $HOME/.bashrc
@@ -45,61 +45,70 @@ echo "source /home/$SUDO_USER/plague-shell/plague-shell/files/plague-prompt.sh" 
 echo "source /home/$SUDO_USER/plague-shell/plague-shell/files/banner.sh" >> /home/$SUDO_USER/.bashrc
 echo 'alias banner="prompt"' >> $HOME/.bashrc
 
-  echo -e "${White}[${BGreen}+${White}] Sourcing main files success!"
-  echo -e -n "\n${White}[${BYellow}*${White}]Do you want to install alias.sh from synth-shell?(y=1/n=0): "
+  echo -e "${BWhite}[${BGreen}+${BWhite}] Sourcing main files success!"
+  echo -e -n "\n${BWhite}[${BYellow}*${BWhite}]Do you want to install alias.sh from synth-shell?(y=1/n=0): "
 read choice1
 if [[ $choice1 == 0 ]];then
-echo -e "${White}[${BRed}-${White}]Skipping alias.sh"
+echo -e "${BWhite}[${BRed}-${BWhite}]Skipping alias.sh"
 echo -e "\n"
 elif [[ $choice1 == 1 ]];then
  aliasfunc
 else 
-  echo -e "${White}[${BRed}-${White}]Invalid Option."
+  echo -e "${BWhite}[${BRed}-${BWhite}]Invalid Option."
 fi
 
-echo -e -n "${White}[${BYellow}*${White}]Do you want to install better-cd.sh from synth-shell?(y=1/n=0): "
+echo -e -n "${BWhite}[${BYellow}*${BWhite}]Do you want to install better-cd.sh from synth-shell?(y=1/n=0): "
 read choice2
 if [[ $choice2 == 0 ]];
 then
-echo -e "${White}[${BRed}-${White}]Skipping better-cd.sh"
+echo -e "${BWhite}[${BRed}-${BWhite}]Skipping better-cd.sh"
 echo -e "\n"
 elif [[ $choice2 == 1 ]];
 then
   bettercd
 else
- echo -e "${White}[${BRed}-${White}]Invalid Option."
+ echo -e "${BWhite}[${BRed}-${BWhite}]Invalid Option."
 fi
-echo -e -n "${White}[${BYellow}*${White}]Do you want to install better-history.sh from synth-shell?(y=1/n=0): "
+echo -e -n "${BWhite}[${BYellow}*${BWhite}]Do you want to install better-history.sh from synth-shell?(y=1/n=0): "
 read choice3
 if [[ $choice3 == 0 ]];
 then
-echo -e "${White}[${BRed}-${White}]Skipping better-history.sh"
+echo -e "${BWhite}[${BRed}-${BWhite}]Skipping better-history.sh"
 echo -e "\n"
 elif [[ $choice3 == 1 ]];
 then
   betterhistory
 else
- echo -e "${White}[${BRed}-${White}]Invalid Option."
+ echo -e "${BWhite}[${BRed}-${BWhite}]Invalid Option."
 fi
 
-echo -e -n "${White}[${BYellow}*${White}]Do you want to install better-cd.sh from synth-shell?(y=1/n=0): "
+echo -e -n "${BWhite}[${BYellow}*${BWhite}]Do you want to install better-cd.sh from synth-shell?(y=1/n=0): "
 read choice4
 if [[ $choice4 == 0 ]];
 then
-echo -e "${White}[${BRed}-${White}]Skipping better-ls.sh"
+echo -e "${BWhite}[${BRed}-${BWhite}]Skipping better-ls.sh"
 echo -e "\n"
 elif [[ $choice4 == 1 ]];
 then
   bettercd
 else
- echo -e "${White}[${BRed}-${White}]Invalid Option."
+ echo -e "${BWhite}[${BRed}-${BWhite}]Invalid Option."
 fi
 
 
 else
-  echo -e "${White}[${BRed}-${White}]Please run the script as root."
+  echo -e "${BWhite}[${BRed}-${BWhite}]Please run the script as root."
 fi
+
+if grep -R "plague-shell" >/dev/null /home/$SUDO_USER/.bashrc;
+then
+  echo -e "\n${BWhite}[${BGreen}+${BWhite}]All set, now open a new terminal and see the changes(CTRL + Shift + T)."
+else
+  echo -e "\n${BWhite}[${BRED}-${BWhite}]Unknown Error Occurred."
+fi
+
 }
+
 figlet Setup.sh
 echo -e "${BWhite}Only run this script once."
 setup
