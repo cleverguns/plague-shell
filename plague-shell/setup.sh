@@ -37,8 +37,8 @@ then
   echo -e "${BWhite}[${BGreen}+${BWhite}]User is running as ${BRed}root."
   sleep 1
   echo -e "${White}[${BGreen}+${BWhite}]Setting up .bashrc file..."
-echo "source $HOME/plague-shell/plague-shell/files/plague-prompt.sh" >> $HOME/.bashrc
-echo "source $HOME/plague-shell/plague-shell/files/banner.sh" >> $HOME/.bashrc
+echo "source /home/$SUDO_USER/plague-shell/plague-shell/files/plague-prompt.sh" >> $HOME/.bashrc
+echo "source /home/$SUDO_USER/plague-shell/plague-shell/files/banner.sh" >> $HOME/.bashrc
 echo 'alias banner="prompt"' >> $HOME/.bashrc
 
 echo "source /home/$SUDO_USER/plague-shell/plague-shell/files/plague-prompt.sh" >> /home/$SUDO_USER/.bashrc
