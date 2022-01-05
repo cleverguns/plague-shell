@@ -1,5 +1,6 @@
 #!/bin/bash
-source /home/$SUDO_USER/plague-shell/plague-shell/plague-shell/colors.sh
+source /home/$SUDO_USER/plague-shell/plague-shell/files/colors.sh
+
 function aliasfunc(){
   echo "source $HOME/.config/synth-shell/alias.sh" >> $HOME/.bashrc
   echo "source /home/$SUDO_USER/.config/synth-shell/alias.sh" >> /home/$SUDO_USER/.bashrc
@@ -36,12 +37,12 @@ then
   echo -e "${White}[${BGreen}+${White}]User is running as root."
   sleep 1
   echo -e "${White}[${BGreen}+${White}]Setting up .bashrc file..."
-echo "source /home/$SUDO_USER/plague-shell/plague-shell/plague-prompt.sh" >> $HOME/.bashrc
-echo "source /home/$SUDO_USER/plague-shell/plague-shell/banner.sh" >> $HOME/.bashrc
+echo "source /home/$SUDO_USER/plague-shell/plague-shell/files/plague-prompt.sh" >> $HOME/.bashrc
+echo "source /home/$SUDO_USER/plague-shell/plague-shell/files/banner.sh" >> $HOME/.bashrc
 echo 'alias banner="prompt"' >> $HOME/.bashrc
 
-echo "source /home/$SUDO_USER/plague-shell/plague-shell/plague-prompt.sh" >> /home/$SUDO_USER/.bashrc
-echo "source /home/$SUDO_USER/plague-shell/plague-shell/banner.sh" >> /home/$SUDO_USER/.bashrc
+echo "source /home/$SUDO_USER/plague-shell/plague-shell/files/plague-prompt.sh" >> /home/$SUDO_USER/.bashrc
+echo "source /home/$SUDO_USER/plague-shell/plague-shell/files/banner.sh" >> /home/$SUDO_USER/.bashrc
 echo 'alias banner="prompt"' >> $HOME/.bashrc
 
   echo -e "${White}[${BGreen}+${White}] Sourcing main files success!"
