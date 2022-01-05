@@ -2,7 +2,7 @@
 
 # <img align="left" src="https://raw.githubusercontent.com/PlagueSec/PlagueSecOS/master/pictures/plaguesec.svg"> PlagueSecurity Shell
 
-PlagueSecurity-Shell is a synth-shell based command prompt, meaning it has features that are derived from synth-shell.
+Plague-Shell is a synth-shell based command prompt, meaning it has features that are derived from synth-shell.
 
 ## Installation
 Installing it is **so simple!**.
@@ -19,10 +19,10 @@ user▶parrot▶[~/plague-shell/plague-shell]──$sudo bash setup.sh
 ```
 
 ## Prompt-Style
-<img src="">
+<img src="https://i.ibb.co/cNXxjs9/shell1.png">
 ### Non-root user prompt-style 
 
-<img src="">
+<img src="https://i.ibb.co/7yWBLmh/shell2.png">
 ### Root user prompt-style 
 
 ## Contributing
