@@ -7,7 +7,7 @@ Plague-Shell is a synth-shell based command prompt, meaning it has features that
 ## Installation
 Installing it is **so simple!**.
 
-```py
+```js
 #Clone the repository
 user▶parrot▶[~/plague-shell/plague-shell]──$ git clone https://github.com/plaguesec/plague-shell/
 
