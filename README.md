@@ -21,11 +21,11 @@ user▶parrot▶[~/plague-shell/plague-shell]──$sudo bash setup.sh
 ## Prompt-Style
 <img src="https://i.ibb.co/VNL8k8j/shell0.png">
 
-### Non-root user prompt-style 
+> Non-Root user prompt-style
 
 <img src="https://i.ibb.co/7yWBLmh/shell2.png">
 
-### Root user prompt-style 
+> Root user prompt-style
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
