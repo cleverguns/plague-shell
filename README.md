@@ -2,7 +2,7 @@
 
 # <img align="left" src="https://raw.githubusercontent.com/PlagueSec/PlagueSecOS/master/pictures/plaguesec.svg"> PlagueSecurity Shell
 
-Plague-Shell is a synth-shell based command prompt, meaning it has features that are derived from synth-shell.
+**Plague-Shell** is a **synth-shell** based command prompt, meaning it has features that are derived from **synth-shell**.
 
 ## Installation
 Installing it is **so simple!**.
