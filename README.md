@@ -33,7 +33,7 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 Please make sure to update tests as appropriate.
 
 ## Socials
-| **Social Platform** | [![Facebook](https://img.shields.io/badge/Facebook-%231877F2.svg?style=for-the-badge&logo=PlagueSec&logoColor=white)](https://www.facebook.com/PlagueSec-104041125002327/) [![Twitter](https://img.shields.io/badge/@plaguesecurity-%231DA1F2.svg?style=for-the-badge&logo=Twitter&logoColor=white)](https://twitter.com/plaguesecurity) [![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=plaguesec&logoColor=white)](https://github.com/plaguesec/)
+| **Social Platform** | [![Facebook](https://img.shields.io/badge/Facebook-%231877F2.svg?style=for-the-badge&logo=facebook&logoColor=white)](https://www.facebook.com/PlagueSec-104041125002327/) [![Twitter](https://img.shields.io/badge/@plaguesecurity-%231DA1F2.svg?style=for-the-badge&logo=Twitter&logoColor=white)](https://twitter.com/plaguesecurity) [![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)](https://github.com/plaguesec/)
  :--- | :---
 ## License
 [GNU GENERAL PUBLIC LICENSE](https://www.gnu.org/licenses/gpl-3.0.en.html)
