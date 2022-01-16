@@ -18,6 +18,9 @@ user▶parrot▶[~/plague-shell/plague-shell]──$ chmod 777 setup.sh
 user▶parrot▶[~/plague-shell/plague-shell]──$sudo bash setup.sh
 ```
 
+| **Programming Languages** | ![Shell Script](https://img.shields.io/badge/shell_script-%23121011.svg?style=for-the-badge&logo=gnu-bash&logoColor=white) 
+ :--- | :---
+ 
 ## Prompt-Style
 <img src="https://i.ibb.co/VNL8k8j/shell0.png">
 
