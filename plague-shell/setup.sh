@@ -12,7 +12,7 @@ function copy_dir(){
 if [[ -d "/home/$SUDO_USER/.config/plague-shell" ]]; then
 return 1
 else
-sudo python3 ../copy.sh
+sudo python3 ../config.sh
 fi
 }
 function aliasfunc(){
@@ -44,12 +44,12 @@ echo -e "\n"
 }
 
 function setup(){
+ copy_dir
   echo -e "${BWhite}[${BYellow}*${BWhite}]Checking if user is running as ${BRed}root."
   sleep 1
 if [ $EUID -eq 0 ];
 then
   echo -e "${BWhite}[${BGreen}+${BWhite}]User is running as ${BRed}root."
-  copy_dir
   sleep 1
   echo -e "${White}[${BGreen}+${BWhite}]Setting up .bashrc file..."
 echo "source /home/$SUDO_USER/plague-shell/plague-shell/files/plague-prompt.sh" >> $HOME/.bashrc
