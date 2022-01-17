@@ -1,8 +1,7 @@
 #!/bin/bash
-source /home/user/plague-shell/plague-shell/files/bgcolors.sh
-source /home/user/plague-shell/plague-shell/files/colors.sh
-source /home/user/plague-shell/plague-shell/files/hardware-info/hardware-info.sh
-
+source /home/user/.config/plague-shell/plague-shell/files/bgcolors.sh
+source /home/user/.config/plague-shell/plague-shell/files/colors.sh
+source /home/user/.config/plague-shell/plague-shell/files/hardware-info/hardware-info.sh
 function prompt(){
 DIR=$(pwd)
 BANNER="

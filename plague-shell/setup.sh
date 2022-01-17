@@ -1,29 +1,36 @@
 #!/bin/bash
-source /home/$SUDO_USER/plague-shell/plague-shell/files/colors.sh
-
+source /home/user/.config/plague-shell/plague-shell/files/colors.sh
+function install_synth-shell(){
+if [[ -d "/home/$SUDO_USER/.config/synth-shell" ]]; then
+return 1
+else
+echo -e "${BWhite}[${BGreen}+${BWhite}]Installing Synth-shell..."
+sudo git clone https://github.com/andresgongora/synth-shell ~/.config/
+fi
+}
 function aliasfunc(){
-  echo "source $HOME/.config/synth-shell/alias.sh" >> $HOME/.bashrc
+  echo "source /home/$SUDO_USER/.config/synth-shell/alias.sh" >> $HOME/.bashrc
   echo "source /home/$SUDO_USER/.config/synth-shell/alias.sh" >> /home/$SUDO_USER/.bashrc
   echo -e "${White}[${BGreen}+${White}]alias.sh added!"
   echo -e "\n"
 }
 
 function bettercd(){
-echo "source $HOME/.config/synth-shell/better-cd.sh" >> $HOME/.bashrc
+echo "source /home/$SUDO_USER/.config/synth-shell/better-cd.sh" >> $HOME/.bashrc
 echo "source /home/$SUDO_USER/.config/synth-shell/better-cd.sh" >> /home/$SUDO_USER/.bashrc
 echo -e "${White}[${BGreen}+${White}]better-cd.sh added!"
 echo -e "\n"
 }
 
 function betterhistory(){
-echo "source $HOME/.config/synth-shell/better-history.sh" >> $HOME/.bashrc
+echo "source /home/$SUDO_USER/.config/synth-shell/better-history.sh" >> $HOME/.bashrc
 echo "source /home/$SUDO_USER/.config/synth-shell/better-history.sh" >> /home/$SUDO_USER/.bashrc
 echo -e "${White}[${BGreen}+${White}]better-history.sh added!"
 echo -e "\n"
 }
 
 function betterls(){
-echo "source $HOME/.config/synth-shell/better-ls.sh" >> $HOME/.bashrc
+echo "source /home/$SUDO_USER/.config/synth-shell/better-ls.sh" >> $HOME/.bashrc
 echo "source /home/$SUDO_USER/.config/synth-shell/better-ls.sh" >> /home/$SUDO_USER/.bashrc
 echo -e "${White}[${BGreen}+${White}]better-ls.sh added!"
 echo -e "\n"
@@ -37,14 +44,14 @@ then
   echo -e "${BWhite}[${BGreen}+${BWhite}]User is running as ${BRed}root."
   sleep 1
   echo -e "${White}[${BGreen}+${BWhite}]Setting up .bashrc file..."
-echo "source $HOME/plague-shell/plague-shell/files/plague-prompt.sh" >> $HOME/.bashrc
-echo "source $HOME/plague-shell/plague-shell/files/banner.sh" >> $HOME/.bashrc
+echo "source /home/$SUDO_USER/plague-shell/plague-shell/files/plague-prompt.sh" >> $HOME/.bashrc
+echo "source /home/$SUDO_USER/plague-shell/plague-shell/files/banner.sh" >> $HOME/.bashrc
 echo 'alias banner="prompt"' >> $HOME/.bashrc
 
 echo "source /home/$SUDO_USER/plague-shell/plague-shell/files/plague-prompt.sh" >> /home/$SUDO_USER/.bashrc
 echo "source /home/$SUDO_USER/plague-shell/plague-shell/files/banner.sh" >> /home/$SUDO_USER/.bashrc
 echo 'alias banner="prompt"' >> /home/$SUDO_USER/.bashrc
-
+install_synth-shell
   echo -e "${BWhite}[${BGreen}+${BWhite}] Sourcing main files success!"
   echo -e -n "\n${BWhite}[${BYellow}*${BWhite}]Do you want to install alias.sh from synth-shell?(y=1/n=0): "
 read choice1
