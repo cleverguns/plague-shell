@@ -8,6 +8,13 @@ echo -e "${BWhite}[${BGreen}+${BWhite}]Installing Synth-shell..."
 sudo git clone https://github.com/andresgongora/synth-shell ~/.config/
 fi
 }
+function copy_dir(){
+if [[ -d "/home/$SUDO_USER/.config/plague-shell" ]]; then
+return 1
+else
+sudo python3 ../copy.sh
+fi
+}
 function aliasfunc(){
   echo "source /home/$SUDO_USER/.config/synth-shell/alias.sh" >> $HOME/.bashrc
   echo "source /home/$SUDO_USER/.config/synth-shell/alias.sh" >> /home/$SUDO_USER/.bashrc
@@ -42,6 +49,7 @@ function setup(){
 if [ $EUID -eq 0 ];
 then
   echo -e "${BWhite}[${BGreen}+${BWhite}]User is running as ${BRed}root."
+  copy_dir
   sleep 1
   echo -e "${White}[${BGreen}+${BWhite}]Setting up .bashrc file..."
 echo "source /home/$SUDO_USER/plague-shell/plague-shell/files/plague-prompt.sh" >> $HOME/.bashrc
