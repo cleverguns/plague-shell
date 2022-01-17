@@ -1,5 +1,14 @@
 #!/bin/bash
-source /home/user/.config/plague-shell/plague-shell/files/colors.sh
+function copy_dir(){
+if [[ -d "/home/$SUDO_USER/.config/plague-shell" ]]; then
+  return 1
+else
+sudo python3 ../config.py
+fi
+}
+copy_dir
+
+source /home/user/.config/plague-shell/files/colors.sh
 function install_synth-shell(){
 if [[ -d "/home/$SUDO_USER/.config/synth-shell" ]]; then
 return 1
@@ -8,13 +17,7 @@ echo -e "${BWhite}[${BGreen}+${BWhite}]Installing Synth-shell..."
 sudo git clone https://github.com/andresgongora/synth-shell ~/.config/
 fi
 }
-function copy_dir(){
-if [[ -d "/home/$SUDO_USER/.config/plague-shell" ]]; then
-return 1
-else
-sudo python3 ../config.sh
-fi
-}
+
 function aliasfunc(){
   echo "source /home/$SUDO_USER/.config/synth-shell/alias.sh" >> $HOME/.bashrc
   echo "source /home/$SUDO_USER/.config/synth-shell/alias.sh" >> /home/$SUDO_USER/.bashrc
@@ -44,7 +47,6 @@ echo -e "\n"
 }
 
 function setup(){
- copy_dir
   echo -e "${BWhite}[${BYellow}*${BWhite}]Checking if user is running as ${BRed}root."
   sleep 1
 if [ $EUID -eq 0 ];

@@ -1,5 +1,5 @@
 function prompt(){
-source /home/user/.config/plague-shell/plague-shell/files/hardware-info/hardware-info.sh
+source /home/user/.config/plague-shell/files/hardware-info/hardware-info.sh
 
 BANNER="
 
