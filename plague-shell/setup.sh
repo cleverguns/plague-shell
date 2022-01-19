@@ -8,7 +8,7 @@ fi
 }
 copy_dir
 
-source /home/user/.config/plague-shell/files/colors.sh
+source /home/$SUDO_USER/.config/plague-shell/files/colors.sh
 function install_synth-shell(){
 if [[ -d "/home/$SUDO_USER/.config/synth-shell" ]]; then
 return 1
