@@ -1,5 +1,5 @@
 #!/bin/bash
-source /home/user/plague-shell/plague-shell/colors.sh
+source /home/user/.config/plague-shell/files/colors.sh
 function hardware_info(){
 OS="$(uname -n)"
 KERNEL="$(uname -r)"
